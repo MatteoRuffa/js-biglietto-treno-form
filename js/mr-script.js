@@ -24,10 +24,10 @@ VARIABILI:
 - Nome passeggero
 - Il numero di chilometri da percorrere
 - Età del passeggero
-
 */
 
 /* DEFINIZIONE VARIABILI */
+/* constanti */
 const priceKilometers = 0.21;
 const discountJunior = 20 / 100;
 const discountSenior = 40 / 100;
@@ -35,26 +35,45 @@ const discountSenior = 40 / 100;
 
 let elUserName = document.getElementById('user-name');
 
-let elUserKilometers = parseInt(document.getElementById('user-kilometers'));
+let elUserKilometers = document.getElementById('user-kilometers');
 
-let elUserAge = parseInt(document.getElementById('user-age'));
+let elUserAge = document.getElementById('user-age');
 
 /* DOVE SI ATTIVERÀ LA FUNZIONE */
 let elButton = document.querySelector('.btn.btn-primary');
 //console.log(elUserName, elUserKilometers, elUserAge, elButton);
 
-/* DOVE ANDRÒ A 'STAMPARE' */
-let elTicket = document.querySelector('.ticket');
 //console.log(elTicket);
 
 /*  ATTIVARE AL CLICK! */
 elButton.addEventListener('click', function(){
     console.log('hai cliccato il bottone');
-    const userName = elUserName.value;
 
-    elTicket.innerHTML = userName;
+    /* DOVE ANDRÒ A 'STAMPARE' */
+    const elTicketUserName = elUserName.value;
 
-    elTicket.className = 'ticket ';
+    const elTicketType = elUserAge.value;
+    // DA PRENDERE CASUALE SOTTO
+    // let elTicketPlace = ;
+    // DA PRENDERE CASUALE SOTTO
+    // let elTicketCP = ;
+    let elTicketPrice = elUserKilometers.value * priceKilometers;
+
+    if(elUserAge.value === "senior") {
+        elTicketPrice -= elTicketPrice * discountSenior;
+        console.log(elTicketPrice.toFixed(2));
+    } else if(elUserAge.value === "junior") {
+        elTicketPrice -= elTicketPrice * discountJunior;
+        console.log(elTicketPrice.toFixed(2));
+    } else {
+        let elTicketPrice = elUserKilometers.value * priceKilometers;
+        console.log(elTicketPrice.toFixed(2));
+    }
+     
+    console.log(elTicketUserName, elTicketType);
+
+
+
 
 
 });
