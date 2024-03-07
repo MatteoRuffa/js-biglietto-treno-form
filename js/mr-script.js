@@ -47,35 +47,46 @@ const elTicket = document.querySelector('.ticket')
 elButton.addEventListener('click', function(){
     /* DOVE ANDRÒ A 'STAMPARE' */
     const elTicketUserName = elUserName.value;
-    document.querySelector('.ticket-user-name').innerHTML = elTicketUserName
+    document.querySelector('.ticket-user-name').innerHTML = elTicketUserName;
 
     const elTicketType = elUserAge.value;
-    document.querySelector('.ticket-type').innerHTML = `Biglietto ${elTicketType}`
+    document.querySelector('.ticket-type').innerHTML = `Biglietto ${elTicketType}`;
 
     let elTicketPlace = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
-    document.querySelector('.ticket-place').innerHTML = `${elTicketPlace}`
+    document.querySelector('.ticket-place').innerHTML = `${elTicketPlace}`;
 
     let elTicketCP =  Math.floor(Math.random() * (100000 - 90000 + 1)) + 90000;
-    document.querySelector('.ticket-CP').innerHTML = `${elTicketCP}`
+    document.querySelector('.ticket-CP').innerHTML = `${elTicketCP}`;
 
     let elTicketPrice = elUserKilometers.value * priceKilometers;
 
     if(elUserAge.value === "senior") {
         elTicketPrice -= elTicketPrice * discountSenior;
         console.log(elTicketPrice.toFixed(2));
-        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`;
     } else if(elUserAge.value === "junior") {
         elTicketPrice -= elTicketPrice * discountJunior;
         console.log(elTicketPrice.toFixed(2));
-        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`;
     } else {
         elTicketPrice 
         console.log(elTicketPrice.toFixed(2));
-        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`;
     }
-    console.log(elTicketUserName, elTicketType);
 
     elTicket.className = 'card ' + ' m2' + ' ticket' ;
+
+    /* CHIEDERE AI PROF PERCHÈ CON || NON FUNZIONA (MANNAGGIA BOIA!) */
+    if (elUserName.value === '') {
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+    } else if (elUserKilometers.value === '') {
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+    } else if (elUserAge.value === '') {
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+    }
 });
 
 let elButtonReset = document.getElementById('reset');
@@ -88,4 +99,8 @@ elButtonReset.addEventListener('click', function(){
     elUserKilometers.value = '';
 
     elUserAge.value = '';
+
+    document.getElementById('message').innerHTML = '';
 });  
+
+
