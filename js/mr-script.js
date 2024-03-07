@@ -43,6 +43,8 @@ let elButton = document.querySelector('.btn.btn-primary');
 
 const elTicket = document.querySelector('.ticket')
 
+const cardMessage = document.querySelector('.card-message')
+
 /*  ATTIVARE AL CLICK! */
 elButton.addEventListener('click', function(){
     /* DOVE ANDRÒ A 'STAMPARE' */
@@ -80,12 +82,15 @@ elButton.addEventListener('click', function(){
     if (elUserName.value === '') {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+        cardMessage.className = 'card ' ;
     } else if (elUserKilometers.value === '') {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+        cardMessage.className = 'card ' ;
     } else if (elUserAge.value === '') {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+        cardMessage.className = 'card ' ;
     }
 });
 
@@ -93,6 +98,7 @@ let elButtonReset = document.getElementById('reset');
 
 elButtonReset.addEventListener('click', function(){
     elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+    cardMessage.className = 'card ' + ' d-none' ;
 
     elUserName.value = '';
 
