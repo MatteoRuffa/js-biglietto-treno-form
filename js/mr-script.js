@@ -48,9 +48,9 @@ elButton.addEventListener('click', function(){
     /* DOVE ANDRÒ A 'STAMPARE' */
     const elTicketUserName = elUserName.value;
     document.querySelector('.ticket-user-name').innerHTML = elTicketUserName
+
     const elTicketType = elUserAge.value;
     document.querySelector('.ticket-type').innerHTML = `Biglietto ${elTicketType}`
-
 
     let elTicketPlace = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
     document.querySelector('.ticket-place').innerHTML = `${elTicketPlace}`
@@ -81,6 +81,21 @@ elButton.addEventListener('click', function(){
 let elButtonReset = document.getElementById('reset');
 
 elButtonReset.addEventListener('click', function(){
-    const elTicketUserName = elUserName;
-    console.log(elTicketUserName);
+    elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
+
+    elUserName.value = '';
+
+    elUserKilometers.value = '';
+
+    elUserAge.value = '';
+
+    // document.querySelector('.ticket-user-name').innerHTML = '';
+
+    // document.querySelector('.ticket-type').innerHTML = '';
+
+    // document.querySelector('.ticket-place').innerHTML = '';
+
+    // document.querySelector('.ticket-CP').innerHTML = '';
+
+    // document.querySelector('.ticket-price').innerHTML = '';
 });    
