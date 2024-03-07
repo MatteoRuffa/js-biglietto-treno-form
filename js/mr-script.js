@@ -88,14 +88,4 @@ elButtonReset.addEventListener('click', function(){
     elUserKilometers.value = '';
 
     elUserAge.value = '';
-
-    // document.querySelector('.ticket-user-name').innerHTML = '';
-
-    // document.querySelector('.ticket-type').innerHTML = '';
-
-    // document.querySelector('.ticket-place').innerHTML = '';
-
-    // document.querySelector('.ticket-CP').innerHTML = '';
-
-    // document.querySelector('.ticket-price').innerHTML = '';
-});    
+});  
