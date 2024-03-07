@@ -51,11 +51,12 @@ elButton.addEventListener('click', function(){
     const elTicketType = elUserAge.value;
     document.querySelector('.ticket-type').innerHTML = `Biglietto ${elTicketType}`
 
-    // DA PRENDERE CASUALE 
-    // let elTicketPlace = ;
 
-    // DA PRENDERE CASUALE 
-    // let elTicketCP = ;
+    let elTicketPlace = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
+    document.querySelector('.ticket-place').innerHTML = `${elTicketPlace}`
+
+    let elTicketCP =  Math.floor(Math.random() * (100000 - 90000 + 1)) + 90000;
+    document.querySelector('.ticket-CP').innerHTML = `${elTicketCP}`
 
     let elTicketPrice = elUserKilometers.value * priceKilometers;
 
