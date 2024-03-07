@@ -31,7 +31,7 @@
                         <div class="mb-3  d-flex flex-column align-items-center ">
                             <label for="user-age" class="form-label fw-medium">Fascia d'età</label>
                             <select class="form-select" id="user-age">
-                                <option value="">Open this select menu</option>
+                                <option value="">Scegli la tua fascia di età</option>
                                 <option value="junior">Minorenne</option>
                                 <option value="standar">Maggiorenne</option>
                                 <option value="senior">Over 65</option>
@@ -46,12 +46,35 @@
                 </div>
              </div>
         </div>
-        <div class="ticket">
-            <div class="ticket-user-name"></div>
-            <div class="ticket-type"></div>
-            <div class="ticket-place"></div>
-            <div class="ticket-CP"></div>
-            <div class="ticket-price"></div>
+        <div class="mr-container ">
+            <h2 class="text-uppercase text-center p-1 text-white "> il tuo biglietto</h2>
+            <div class="card m-2 ticket">
+                <div  class="card-body">
+                    <h5 class="text-uppercase fw-bold text-black">dettaglio passeggeri</h5>
+                    <div class="info-ticket row mx-1 ">
+                        <div class="card-ticket-user-name p-3 col-3 " >
+                            <div class="text-uppercase fw-bold text-black fs-5 ">nome passeggero</div>
+                            <div class="ticket-user-name fw-bold text-black"></div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between col">
+                            <div class="fw-bold text-black p-3">Offerta</div>
+                            <div class="ticket-type fw-medium  text-black p-3"></div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between col-2">
+                            <div class="fw-bold text-black p-3">Carrozza</div>
+                            <div class="ticket-place fw-medium  text-black p-3"></div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between col-2">
+                            <div class="fw-bold text-black p-3">Codice CP</div>
+                            <div class="ticket-CP fw-medium  text-black p-3"></div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between col">
+                            <div class="fw-bold text-black p-3">Costo biglietto</div>
+                            <div class="ticket-price fw-medium  text-black p-3"></div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 

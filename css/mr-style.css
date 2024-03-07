@@ -39,4 +39,17 @@ select {
     border-color: orange!important;
 }
 
+.ticket {
+    border-radius: 0px;
+}
+
+.info-ticket {
+    border-top: 2px solid var(--mr-color-bg-btn) ;
+    border-bottom: 2px solid var(--mr-color-bg-btn);
+    height: 120px;
+}
+
+.card-ticket-user-name {
+    background-color: var(--mr-color-contrast);
+}
 
