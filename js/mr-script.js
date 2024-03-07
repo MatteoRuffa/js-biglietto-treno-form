@@ -19,5 +19,42 @@ finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina 
 (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi
 sul prezzo). Questo richiederà un minimo di ricerca.
+
+VARIABILI:
+- Nome passeggero
+- Il numero di chilometri da percorrere
+- Età del passeggero
+
 */
 
+/* DEFINIZIONE VARIABILI */
+const priceKilometers = 0.21;
+const discountJunior = 20 / 100;
+const discountSenior = 40 / 100;
+//console.log(priceKilometers, discountJunior, discountSenior);
+
+let elUserName = document.getElementById('user-name');
+
+let elUserKilometers = parseInt(document.getElementById('user-kilometers'));
+
+let elUserAge = parseInt(document.getElementById('user-age'));
+
+/* DOVE SI ATTIVERÀ LA FUNZIONE */
+let elButton = document.querySelector('.btn.btn-primary');
+//console.log(elUserName, elUserKilometers, elUserAge, elButton);
+
+/* DOVE ANDRÒ A 'STAMPARE' */
+let elTicket = document.querySelector('.ticket');
+//console.log(elTicket);
+
+/*  ATTIVARE AL CLICK! */
+elButton.addEventListener('click', function(){
+    console.log('hai cliccato il bottone');
+    const userName = elUserName.value;
+
+    elTicket.innerHTML = userName;
+
+    elTicket.className = 'ticket ';
+
+
+});
