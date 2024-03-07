@@ -47,33 +47,32 @@ let elButton = document.querySelector('.btn.btn-primary');
 
 /*  ATTIVARE AL CLICK! */
 elButton.addEventListener('click', function(){
-    console.log('hai cliccato il bottone');
-
     /* DOVE ANDRÒ A 'STAMPARE' */
     const elTicketUserName = elUserName.value;
-
+    document.querySelector('.ticket-user-name').innerHTML = elTicketUserName
     const elTicketType = elUserAge.value;
-    // DA PRENDERE CASUALE SOTTO
+    document.querySelector('.ticket-type').innerHTML = `Biglietto ${elTicketType}`
+
+    // DA PRENDERE CASUALE 
     // let elTicketPlace = ;
-    // DA PRENDERE CASUALE SOTTO
+
+    // DA PRENDERE CASUALE 
     // let elTicketCP = ;
+
     let elTicketPrice = elUserKilometers.value * priceKilometers;
 
     if(elUserAge.value === "senior") {
         elTicketPrice -= elTicketPrice * discountSenior;
         console.log(elTicketPrice.toFixed(2));
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
     } else if(elUserAge.value === "junior") {
         elTicketPrice -= elTicketPrice * discountJunior;
         console.log(elTicketPrice.toFixed(2));
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
     } else {
-        let elTicketPrice = elUserKilometers.value * priceKilometers;
+        elTicketPrice 
         console.log(elTicketPrice.toFixed(2));
+        document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
     }
-     
     console.log(elTicketUserName, elTicketType);
-
-
-
-
-
 });
