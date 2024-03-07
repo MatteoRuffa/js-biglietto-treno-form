@@ -41,6 +41,8 @@ let elUserAge = document.getElementById('user-age');
 /* DOVE SI ATTIVERÀ LA FUNZIONE */
 let elButton = document.querySelector('.btn.btn-primary');
 
+const elTicket = document.querySelector('.ticket')
+
 /*  ATTIVARE AL CLICK! */
 elButton.addEventListener('click', function(){
     /* DOVE ANDRÒ A 'STAMPARE' */
@@ -71,4 +73,13 @@ elButton.addEventListener('click', function(){
         document.querySelector('.ticket-price').innerHTML = `${elTicketPrice.toFixed(2)} &euro;`
     }
     console.log(elTicketUserName, elTicketType);
+
+    elTicket.className = 'card ' + ' m2' + ' ticket' ;
 });
+
+let elButtonReset = document.getElementById('reset');
+
+elButtonReset.addEventListener('click', function(){
+    const elTicketUserName = elUserName;
+    console.log(elTicketUserName);
+});    

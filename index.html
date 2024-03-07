@@ -13,8 +13,8 @@
     <title>calcolo del prezzo del biglietto del treno</title>
 </head>
 
-<body>
-    <main class="pb-5 ">
+<body class="container-fluid vh-100 ">
+    <main class=" ">
         <div class="mr-container">
             <h2 class="text-uppercase text-center p-4 text-white ">calcola il prezzo del tuo biglietto</h2>
             <div class="card m-2 ">
@@ -38,17 +38,18 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-3 p-4 ">
+                    <div class="d-flex justify-content-center gap-3 p-4">
                         <button type="button" class="btn btn-primary fw-bold">Genera</button>
-                        <button type="button" class="btn btn-primary fw-bold">Annulla</button>
+                        <button type="button" class="btn btn-primary fw-bold" id="reset">Annulla</button>
                     </div>
                     
                 </div>
              </div>
         </div>
-        <div class="mr-container ">
+        <div class="mr-container">
             <h2 class="text-uppercase text-center p-1 text-white "> il tuo biglietto</h2>
-            <div class="card m-2 ticket">
+            <!-- VEDERE SE C'È UN MODO PER SOOTTARE LA COMPARSA DEL TICKET -->
+            <div class="card m-2 ticket  d-none">
                 <div  class="card-body">
                     <h5 class="text-uppercase fw-bold text-black">dettaglio passeggeri</h5>
                     <div class="info-ticket row mx-1 ">
