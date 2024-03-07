@@ -14,27 +14,37 @@
 </head>
 
 <body>
-    <main>
-        <div>
-            <div class="mb-3">
-                <label for="user-name" class="form-label">Nome Cognome</label>
-                <input type="text" value="" class="form-control" id="user-name">
-            </div>
-            <div class="mb-3">
-                <label for="user-kilometers" class="form-label">Km da percorrere</label>
-                <input type="text" value="" class="form-control" id="user-kilometers">
-            </div>
-            <div class="mb-3">
-                <label for="user-age" class="form-label">Fascia d'età</label>
-                <select class="form-select" id="user-age">
-                    <option value="">Open this select menu</option>
-                    <option value="junior">Minorenne</option>
-                    <option value="standar">Maggiorenne</option>
-                    <option value="senior">Over 65</option>
-                </select>
-            </div>
-            <button type="button" class="btn btn-primary">Genera</button>
-            <button type="button" class="btn btn-primary">Annulla</button>
+    <main class="pb-5 ">
+        <div class="mr-container">
+            <h2 class="text-uppercase text-center p-4 text-white ">calcola il prezzo del tuo biglietto</h2>
+            <div class="card m-2 ">
+                <div class="card-body">
+                    <div class="d-flex justify-content-around px-5 mx-5 py-2 ">
+                        <div class="mb-3 d-flex flex-column align-items-center">
+                            <label for="user-name" class="form-label fw-medium ">Nome Cognome</label>
+                            <input type="text" value="" class="form-control" id="user-name">
+                        </div>
+                        <div class="mb-3  d-flex flex-column align-items-center ">
+                            <label for="user-kilometers" class="form-label fw-medium">Km da percorrere</label>
+                            <input type="text" value="" class="form-control" id="user-kilometers">
+                        </div>
+                        <div class="mb-3  d-flex flex-column align-items-center ">
+                            <label for="user-age" class="form-label fw-medium">Fascia d'età</label>
+                            <select class="form-select" id="user-age">
+                                <option value="">Open this select menu</option>
+                                <option value="junior">Minorenne</option>
+                                <option value="standar">Maggiorenne</option>
+                                <option value="senior">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 p-4 ">
+                        <button type="button" class="btn btn-primary fw-bold">Genera</button>
+                        <button type="button" class="btn btn-primary fw-bold">Annulla</button>
+                    </div>
+                    
+                </div>
+             </div>
         </div>
         <div class="ticket">
             <div class="ticket-user-name"></div>

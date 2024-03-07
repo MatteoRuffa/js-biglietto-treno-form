@@ -1,0 +1,42 @@
+:root {
+    --mr-color-primary: #FFFFFF;
+    --mr-color-secondary: #000000
+    --mr-color-bg-primary:  rgb(185, 20, 80);
+    --mr-color-contrast: #808080;
+    --mr-color-bg-btn: #CCCCCC;
+}
+
+main {
+    background-color: rgb(185, 20, 80);
+}
+
+.mr-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+label {
+    color:rgb(185, 20, 80);
+}
+
+input {
+    border-color: rgb(185, 20, 80)!important;
+}
+
+select {
+    border-color: rgb(185, 20, 80)!important;
+}
+
+.btn {
+    background-color: var(--mr-color-bg-btn)!important;
+    color:  rgb(185, 20, 80)!important;
+    border: var(--bs-btn-border-width) solid var(--mr-color-contrast)!important;
+    font-size: 1.2rem!important;
+    padding: 4px 8px!important;
+}
+
+.btn:hover {
+    border-color: orange!important;
+}
+
+

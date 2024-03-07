@@ -31,7 +31,6 @@ VARIABILI:
 const priceKilometers = 0.21;
 const discountJunior = 20 / 100;
 const discountSenior = 40 / 100;
-//console.log(priceKilometers, discountJunior, discountSenior);
 
 let elUserName = document.getElementById('user-name');
 
@@ -41,9 +40,6 @@ let elUserAge = document.getElementById('user-age');
 
 /* DOVE SI ATTIVERÀ LA FUNZIONE */
 let elButton = document.querySelector('.btn.btn-primary');
-//console.log(elUserName, elUserKilometers, elUserAge, elButton);
-
-//console.log(elTicket);
 
 /*  ATTIVARE AL CLICK! */
 elButton.addEventListener('click', function(){
