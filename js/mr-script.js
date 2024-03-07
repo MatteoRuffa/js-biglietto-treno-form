@@ -80,15 +80,15 @@ elButton.addEventListener('click', function(){
 
     /* CHIEDERE AI PROF PERCHÈ CON || NON FUNZIONA (MANNAGGIA BOIA!) */
     if (elUserName.value === '') {
-        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;
     } else if (elUserKilometers.value === '') {
-        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;
     } else if (elUserAge.value === '') {
-        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stanpi il biglietto!';
+        document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;
     }
