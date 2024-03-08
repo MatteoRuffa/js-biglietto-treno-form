@@ -34,7 +34,7 @@ const discountSenior = 40 / 100;
 
 let elUserName = document.getElementById('user-name');
 
-let elUserKilometers = parseInt(document.getElementById('user-kilometers'));
+let elUserKilometers = document.getElementById('user-kilometers');
 
 let elUserAge = document.getElementById('user-age');
 
@@ -60,7 +60,7 @@ elButton.addEventListener('click', function(){
     let elTicketCP =  Math.floor(Math.random() * (100000 - 90000 + 1)) + 90000;
     document.querySelector('.ticket-CP').innerHTML = `${elTicketCP}`;
 
-    let elTicketPrice = elUserKilometers.value * priceKilometers;
+    let elTicketPrice = parseInt(elUserKilometers.value) * priceKilometers;
 
     if(elUserAge.value === "senior") {
         elTicketPrice -= elTicketPrice * discountSenior;
