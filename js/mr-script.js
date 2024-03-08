@@ -34,7 +34,7 @@ const discountSenior = 40 / 100;
 
 let elUserName = document.getElementById('user-name');
 
-let elUserKilometers = document.getElementById('user-kilometers');
+let elUserKilometers = parseInt(document.getElementById('user-kilometers'));
 
 let elUserAge = document.getElementById('user-age');
 
@@ -79,15 +79,15 @@ elButton.addEventListener('click', function(){
     elTicket.className = 'card ' + ' m2' + ' ticket' ;
 
     /* CHIEDERE AI PROF PERCHÈ CON || NON FUNZIONA (MANNAGGIA BOIA!) */
-    if (elUserName.value === '') {
+    if ((elUserName.value === '') || (!isNaN(elUserName.value))) {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;
-    } else if (elUserKilometers.value === '') {
+    } else if ((elUserKilometers.value === '') || (!isNaN(elUserName.value))) {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;
-    } else if (elUserAge.value === '') {
+    } else if ((elUserAge.value === '') || (!isNaN(elUserName.value))) {
         document.getElementById('message').innerHTML = 'devi compilare tutti i campi perchè si stampi il biglietto!';
         elTicket.className = 'card ' + ' m2' + ' ticket' + ' d-none' ;
         cardMessage.className = 'card ' ;

@@ -1,7 +1,7 @@
 :root {
     --mr-color-primary: #FFFFFF;
     --mr-color-secondary: #000000
-    --mr-color-bg-primary:  rgb(185, 20, 80);
+    --mr-color-bg:  rgb(185, 20, 80);
     --mr-color-contrast: #808080;
     --mr-color-bg-btn: #CCCCCC;
 }
